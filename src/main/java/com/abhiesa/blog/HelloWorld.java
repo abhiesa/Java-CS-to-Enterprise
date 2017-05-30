@@ -7,7 +7,7 @@ package com.abhiesa.blog;
 public final class HelloWorld {
 
   /**
-   * @param boolean bigger
+   * @param  bigger boolean
    * @return String
    */
   public String getMessage(final boolean bigger) {
