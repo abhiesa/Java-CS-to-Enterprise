@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>com.abhiesa.blog</groupId>
-  <artifactId>java-cs-to-enterprise</artifactId>    
+  <artifactId>java-cs-to-enterprise</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
   
