@@ -1,4 +1,4 @@
-package org.abhiesa.blog;
+package com.abhiesa.blog;
 
 public class HelloWorld {
 
