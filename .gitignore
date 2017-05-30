@@ -24,3 +24,5 @@ hs_err_pid*
 target/
 org.jacoco.examples.maven.java.iml
 .idea
+*.iml
+java-cs-to-enterprise.iml

@@ -7,6 +7,13 @@ cache:
   directories:
     - $HOME/.m2
 script:
-  mvn clean verify cobertura:cobertura install
+  mvn clean validate compile package verify install site
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard 857a312c449a1869a6e361479c73bff25036c9ee
+  local_dir: target/site
+  on:
+    branch: master

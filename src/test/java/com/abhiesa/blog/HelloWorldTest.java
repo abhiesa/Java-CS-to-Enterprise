@@ -1,8 +1,9 @@
 package com.abhiesa.blog;
 
-import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class HelloWorldTest {
 
@@ -15,7 +16,10 @@ public class HelloWorldTest {
 
   @Test
   public void testGetMessage() {
-    assertEquals("Hello World!", subject.getMessage(false));
+
+    assertThat(subject.getMessage(false)).isEqualTo("Hello World!");
+    assertThat(subject.getMessage(true)).isEqualTo("Hello Universe!");
+
   }
 
 }
