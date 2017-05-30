@@ -1,13 +1,21 @@
 package com.abhiesa.blog;
 
-public class HelloWorld {
+/**
+ * @author Abhishek Pandey
+ * @since 31-May-2017
+ */
+public final class HelloWorld {
 
-  public String getMessage (boolean bigger) {
+  /**
+   * @param boolean bigger
+   * @return String
+   */
+  public String getMessage(final boolean bigger) {
     if (bigger) {
       return "Hello Universe!";
-    } else { 
+    } else {
       return "Hello World!";
     }
   }
-  
+
 }

@@ -18,11 +18,3 @@ deploy:
     on:
       branch: master
       local_dir: target/site
-  - provider: releases
-    api_key: $GITHUB_TOKEN
-    skip_cleanup: true
-    file:
-        - "target/java-cs-to-enterprise-1.0.0.jar"
-        - "target/java-cs-to-enterprise-1.0.0-sources.jar"
-    on:
-        tags: true
