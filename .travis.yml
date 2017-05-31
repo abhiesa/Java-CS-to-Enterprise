@@ -10,6 +10,7 @@ script:
   mvn clean validate compile package verify install site
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - mvn clean test jacoco:report coveralls:report
 deploy:
   - provider: pages
     skip_cleanup: true
