@@ -4,13 +4,13 @@ package com.abhiesa.blog;
  * @author Abhishek Pandey
  * @since 31-May-2017
  */
-public final class HelloWorld {
+final class HelloWorld {
 
   /**
    * @param  bigger boolean
    * @return String
    */
-  public String getMessage(final boolean bigger) {
+  String getMessage(final boolean bigger) {
     if (bigger) {
       return "Hello Universe!";
     } else {
