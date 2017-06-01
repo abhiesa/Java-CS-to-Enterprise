@@ -8,6 +8,6 @@ package com.abhiesa.blog;
 public abstract class Singleton {
   public static final Multiton MULTITON = new Multiton();
 
-  private Singleton() {
+  public Singleton() {
   }
 }
