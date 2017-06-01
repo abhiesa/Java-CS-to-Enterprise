@@ -6,8 +6,16 @@ sudo: false
 cache:
   directories:
     - $HOME/.m2
+addons:
+  sonarqube:
+    organization: "abhiesa-github"
+    token: $SONAR_TOKEN
+    branches:
+          - master
+    github_token: $GITHUB_TOKEN
 script:
-  mvn clean validate compile package verify install site
+  - mvn clean validate compile package verify install site sonar:sonar
+  - sonar-scanner
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - mvn clean test jacoco:report coveralls:report
