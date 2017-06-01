@@ -14,11 +14,10 @@ addons:
           - master
     github_token: $GITHUB_TOKEN
 script:
-  - mvn clean validate compile package verify install site sonar:sonar
+  - mvn clean validate compile package verify install sonar:sonar
   - sonar-scanner
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
-  - mvn clean test jacoco:report coveralls:report
+  - mvn clean test jacoco:report coveralls:report site
 deploy:
   - provider: pages
     skip_cleanup: true

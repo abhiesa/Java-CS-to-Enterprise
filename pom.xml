@@ -7,7 +7,9 @@
   <packaging>jar</packaging>
   <name>Java CS to Enterprise</name>
   <url>http://abhiesa.com</url>
-  <description>Created as a means to reuse cherry picked best practices.</description>
+  <description>This repository acts as standalone or upcoming book for educating interested Computer Science students to
+    Data Structures, Algoritms, Design Pattersn on Java 8.
+  </description>
   <developers>
     <developer>
       <name>Abhishek Pandey</name>

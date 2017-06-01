@@ -27,7 +27,7 @@ public class Multiton {
    * @return - The value stored (and perhaps created) behind the key.
    */
   public <V, C extends Multiton.Creator<V>> V get(final C key) {
-    return key.cast(multitons.computeIfAbsent(key, k -> k.create()));
+    return key.cast(multitons.computeIfAbsent(key, Creator::create));
   }
 
   /**
@@ -39,7 +39,7 @@ public class Multiton {
     V cast(Object value);
   }
 
-  public static abstract class TypedCreator<A> implements Creator<A> {
+  public abstract static class TypedCreator<A> implements Creator<A> {
 
     private final Class<A> tclass;
 
