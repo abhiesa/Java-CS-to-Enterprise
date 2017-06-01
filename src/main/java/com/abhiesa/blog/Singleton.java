@@ -6,8 +6,8 @@ package com.abhiesa.blog;
  */
 
 public abstract class Singleton {
+
+  /* intentional, not a code smell. part of pattern */
   public static final Multiton MULTITON = new Multiton();
 
-  public Singleton() {
-  }
 }

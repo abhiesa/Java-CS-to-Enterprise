@@ -15,7 +15,6 @@ addons:
     github_token: $GITHUB_TOKEN
 script:
   - mvn clean validate compile package verify install sonar:sonar
-  - sonar-scanner
 after_success:
   - mvn clean test jacoco:report coveralls:report site
 deploy:
