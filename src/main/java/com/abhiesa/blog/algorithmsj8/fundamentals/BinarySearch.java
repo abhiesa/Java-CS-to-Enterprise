@@ -12,7 +12,8 @@ import java.util.List;
 
 public class BinarySearch<K extends Comparable> extends Singleton {
 
-  private static final Multiton.Creator<BinarySearch> KEY = new Multiton.SuppliedCreator<>(BinarySearch.class, BinarySearch::new);
+  private static final Multiton.Creator<BinarySearch> KEY =
+    new Multiton.SuppliedCreator<>(BinarySearch.class, BinarySearch::new);
 
   private BinarySearch() {
 
@@ -25,22 +26,23 @@ public class BinarySearch<K extends Comparable> extends Singleton {
   /**
    * Returns the index of the specified key in the specified array.
    *
-   * @param a   the array of integers, must be sorted in ascending order
+   * @param list   the array of integers, must be sorted in ascending order
    * @param key the search key
    * @return index of key in array {@code a} if present; {@code -1} otherwise
    */
-  public K indexOf(K key, List<K> a) {
+  public K indexOf(K key, List<K> list) {
     int lo = 0;
-    int hi = a.size() - 1;
+    int hi = list.size() - 1;
     while (lo <= hi) {
       // Key is in a[lo..hi] or not present.
       int mid = lo + (hi - lo) / 2;
-      if (key.compareTo(a.get(mid)) < 0)
+      if (key.compareTo(list.get(mid)) < 0) {
         hi = mid - 1;
-      else if (key.compareTo(a.get(mid)) > 0)
+      } else if (key.compareTo(list.get(mid)) > 0) {
         lo = mid + 1;
-      else
-        return a.get(mid);
+      } else {
+        return list.get(mid);
+      }
     }
     return null;
   }

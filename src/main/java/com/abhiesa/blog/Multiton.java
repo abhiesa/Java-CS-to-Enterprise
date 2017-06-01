@@ -14,8 +14,8 @@ public class Multiton {
 
   /**
    * The storage.
-   * <p>
-   * Store only Object because they must all be different types.
+   *
+   * <p>Store only Object because they must all be different types.
    */
   private final ConcurrentMap<Creator<?>, Object> multitons = new ConcurrentHashMap<>();
 

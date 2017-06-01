@@ -11,10 +11,14 @@
   <version>1.0.0</version>
   <packaging>jar</packaging>
   <name>Java CS to Enterprise</name>
-  <url>http://abhiesa.com</url>
+  <url>http://abhiesa.com/Java-CS-to-Enterprise/</url>
   <description>This repository acts as standalone or upcoming book for educating interested Computer Science students to
-    Data Structures, Algoritms, Design Pattersn on Java 8.
+    Data Structures, Algorithms, Design Pattersn on Java 8.
   </description>
+  <organization>
+    <name>ABHIESA</name>
+    <url>http://abhiesa.com</url>
+  </organization>
   <developers>
     <developer>
       <name>Abhishek Pandey</name>
@@ -29,29 +33,16 @@
   <ciManagement>
     <url>https://travis-ci.org/abhiesa/Java-CS-to-Enterprise</url>
   </ciManagement>
-  <licenses>
-    <license>
-      <url>http://creativecommons.org/licenses/by-nc/4.0/</url>
-    </license>
-  </licenses>
   <scm>
     <url>https://github.com/abhiesa/Java-CS-to-Enterprise</url>
   </scm>
   <inceptionYear>2017</inceptionYear>
-  <issueManagement>
-    <url>https://github.com/abhiesa/Java-CS-to-Enterprise/issues</url>
-  </issueManagement>
-  <contributors>
-    <contributor>
-      <name>Abhishek Pandey</name>
-      <email>abhiesa@outlook.com</email>
-      <organization>abhiesa</organization>
-      <organizationUrl>http://abhiesa.com</organizationUrl>
-    </contributor>
-  </contributors>
+
   <properties>
     <java.version>1.8</java.version>
+    <skip.unit.tests>false</skip.unit.tests>
   </properties>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -83,7 +74,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
 
   <!-- Reporting Modules to generate content site-->
   <reporting>
@@ -141,7 +131,7 @@
               <!--<report>distribution-management</report>-->
               <report>index</report>
               <report>issue-tracking</report>
-              <report>license</report>
+              <!--<report>license</report> -->
               <!--<report>mailing-list</report>-->
               <!--<report>modules</report>-->
               <!--<report>plugin-management</report>-->
@@ -157,32 +147,13 @@
   </reporting>
 
 
-  <!-- Build and plugin configurations
-
-
-    <repositories>
-      <repository>
-        <id>oss-sonatype-snapshots</id>
-        <name>OSS Sonatype snapshots repository</name>
-        <url>https://oss.sonatype.org/content/groups/staging</url>
-      </repository>
-      <repository>
-        <id>a1</id>
-        <name>A1</name>
-        <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
-      </repository>
-      <repository>
-        <id>a2</id>
-        <name>A2</name>
-        <url>https://repository.apache.org/content/repositories/snapshots</url>
-      </repository>
-    </repositories>
--->
+  <!-- Build and plugin configurations-->
   <build>
 
     <sourceDirectory>src/main/java</sourceDirectory>
 
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -204,10 +175,7 @@
           </dependency>
         </dependencies>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -222,14 +190,7 @@
           </excludes>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.5.3</version>
-        <configuration>
-          <autoVersionSubmodules>true</autoVersionSubmodules>
-        </configuration>
-      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
@@ -243,6 +204,7 @@
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
@@ -272,6 +234,7 @@
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
@@ -330,6 +293,7 @@
           -->
         </executions>
       </plugin>
+
       <plugin>
         <groupId>org.eluder.coveralls</groupId>
         <artifactId>coveralls-maven-plugin</artifactId>
