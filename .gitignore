@@ -26,3 +26,5 @@ org.jacoco.examples.maven.java.iml
 .idea
 *.iml
 java-cs-to-enterprise.iml
+.DS_Store
+src/.DS_Store
